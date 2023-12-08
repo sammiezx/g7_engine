@@ -2,8 +2,8 @@ import pandas as pd
 
 
 def clean_column_with_mean(dataframe, column_name, replace=True):
+    # this method cleans the dataframe columns by remvoving and coercing to the mean
     df = dataframe.copy()
-
     new_column_name = column_name
     if not replace:
         new_column_name = 'new_' + column_name
