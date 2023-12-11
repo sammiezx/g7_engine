@@ -1,9 +1,12 @@
-import mysql.connector
+# pip install psycopg2
+
 import pandas as pd
+import psycopg2
 
 def get_dataframe(table='students', database='neem', host='localhost', user='neem_user', password='password'):
- 
-    connection = mysql.connector.connect(host=host, user=user, password=password, database=database)
+
+    # Connect to the PostgreSQL database
+    connection = psycopg2.connect(host=host, user=user, password=password, database=database)
 
     # Create a cursor to execute queries
     cursor = connection.cursor()
@@ -24,4 +27,5 @@ def get_dataframe(table='students', database='neem', host='localhost', user='nee
     # Close the cursor and connection
     cursor.close()
     connection.close()
+    
     return df
