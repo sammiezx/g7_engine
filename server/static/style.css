@@ -1,0 +1,75 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #6dddff;
+}
+
+.home-container {
+    position:absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: #ffcc00; /* Change the color on hover */
+}
+
+/* Updated styling for dashboard buttons and tabs */
+.dashboard-tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #333; /* Darker color */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.dashboard-button:hover {
+    background-color: #555; /* Slightly brighter on hover */
+}
+
+/* Styling for the g7 ENGINE text */
+.larger-logo-container {
+    margin-top: 50px; /* Adjust the margin-top for vertical position */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.g7-engine-text {
+    font-size: 1em;
+    position:absolute;
+    left: 2%;
+    font-weight: bold;
+    color: #59bd97; /* Yellow color */
+    text-shadow: 2px 2px 4px #333; /* Text shadow for emphasis */
+}

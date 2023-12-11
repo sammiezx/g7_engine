@@ -1,0 +1,45 @@
+<!-- inventory.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            overflow-y: scroll; /* Allow vertical scrolling */
+        }
+        .data-container {
+            max-height: 70vh; /* Set a maximum height for the container */
+            overflow-y: auto; /* Enable vertical scrolling within the container */
+            margin-bottom: 20px;
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventory Page</h1>
+    
+    <!-- Inventory Table -->
+    <div class="data-container">
+        <h2>Inventory Table</h2>
+        {{ inventory_table|safe }}
+    </div>
+    
+    <!-- Bar Chart -->
+    <div class="chart-container">
+        <h2>Stock Levels - Bar Chart</h2>
+        {{ bar_chart|safe }}
+    </div>
+    
+    <!-- Pie Chart -->
+    <div class="chart-container">
+        <h2>Stock Distribution - Pie Chart</h2>
+        {{ pie_chart|safe }}
+    </div>
+
+</body>
+</html>

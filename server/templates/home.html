@@ -1,0 +1,64 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px; /* Adjust width as needed */
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .dashboard-tabs {
+            display: flex;
+            justify-content: center;
+        }
+        .dashboard-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .dashboard-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body style="background-image: url('{{ url_for('static', filename='background.jpg') }}');">
+
+    <!-- Logo Container -->
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='arima_analytics_logo.png') }}" alt="ARIMA Analytics Logo">
+    </div>
+    <div class="larger-logo-container">
+        <p class="g7-engine-text">g7 ENGINE</p>
+    </div>
+
+    <div class="home-container">
+        <h1>Welcome to G7engine</h1>
+        <p>powered by ARIMA Analytix</p>
+        <div class="dashboard-tabs">
+            <a class="dashboard-button" href="{{ url_for('inventory') }}">Inventory</a>
+            <a class="dashboard-button" href="{{ url_for('forecast') }}">Forecast</a>
+            <a class="dashboard-button" href="#">Customer</a> <!-- Dummy tab -->
+            <a class="dashboard-button" href="#">Finance</a> <!-- Dummy tab -->
+            <a class="dashboard-button" href="#">Settings</a> <!-- Dummy tab -->
+        </div>
+    </div>
+
+</body>
+</html>

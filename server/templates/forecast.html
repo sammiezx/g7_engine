@@ -1,0 +1,49 @@
+<!-- forecast.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            overflow-y: scroll; /* Allow vertical scrolling */
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+        .matplotlib-plot {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Forecast Page</h1>
+    
+    <!-- Forecast Table -->
+    <div class="data-container">
+        <h2>Forecast Table</h2>
+        {{ forecast_table|safe }}
+    </div>
+    
+    <!-- Bar Chart -->
+    <div class="chart-container">
+        <h2>Sales Forecast - Bar Chart</h2>
+        {{ bar_chart|safe }}
+    </div>
+    
+    <!-- Pie Chart -->
+    <div class="chart-container">
+        <h2>Forecast Distribution - Pie Chart</h2>
+        {{ pie_chart|safe }}
+    </div>
+
+    <!-- Matplotlib Plot -->
+    <div class="matplotlib-plot">
+        <h2>Sales Forecast - Matplotlib Plot</h2>
+        <img src="data:image/png;base64,{{ matplotlib_plot }}" alt="Matplotlib Plot">
+    </div>
+
+</body>
+</html>
